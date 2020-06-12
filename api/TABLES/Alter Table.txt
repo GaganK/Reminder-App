@@ -1,0 +1,5 @@
+ALTER TABLE `reminders` ADD `complete_remark` TEXT NULL DEFAULT NULL AFTER `complete_updated_date`;
+
+ALTER TABLE `persons` ADD `complete` VARCHAR(2) NOT NULL DEFAULT '0' AFTER `person_mobile`, ADD `complete_updated_date` DATETIME NOT NULL AFTER `complete`, ADD `complete_remark` TEXT NULL DEFAULT NULL AFTER `complete_updated_date`;
+
+ALTER TABLE `reminders` ADD `repeat_type_dismiss` ENUM('0','1') NOT NULL DEFAULT '0' AFTER `repeat_duration`;
